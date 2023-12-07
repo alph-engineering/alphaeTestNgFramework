@@ -13,13 +13,14 @@ public class ReadData {
     public static Properties propertyPay = property;
 
     public ReadData(){
-
-
         try {
-            FileInputStream fis1 = new FileInputStream(System.getProperty("user.dir")+ File.separator+"resources"+File.separator+"testdata"+File.separator+"shipping.properties");
-            FileInputStream fis2 = new FileInputStream(System.getProperty("user.dir")+ File.separator+"resources"+File.separator+"testdata"+File.separator+"payment.properties");
+            FileInputStream fis1 = new FileInputStream(System.getProperty("user.dir")+ File.separator+"resources"+File.separator+"properties"+File.separator+"config.properties");
+            FileInputStream fis2 = new FileInputStream(System.getProperty("user.dir")+ File.separator+"resources"+File.separator+"properties"+File.separator+"shipping.properties");
+            FileInputStream fis3 = new FileInputStream(System.getProperty("user.dir")+ File.separator+"resources"+File.separator+"properties"+File.separator+"payment.properties");
+
             property.load(fis1);
             property.load(fis2);
+            property.load(fis3);
         } catch(FileNotFoundException e) {
             e.printStackTrace();
         } catch(IOException e1) {
