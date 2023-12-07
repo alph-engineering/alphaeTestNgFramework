@@ -8,6 +8,6 @@ pageobjects/CheckoutShippingPage.class
 pageobjects/TestCode.class
 utils/BrowserFactory.class
 testcases/BaseTest.class
-utils/ReadData.class
 pageobjects/ProductPage.class
+utils/ReadData.class
 utils/GenericMethods.class

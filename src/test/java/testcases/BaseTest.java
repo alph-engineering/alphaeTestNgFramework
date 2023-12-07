@@ -8,12 +8,15 @@ import org.testng.annotations.Test;
 import pageobjects.*;
 import utils.BrowserFactory;
 import utils.GenericMethods;
+import utils.ReadData;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+
+import static utils.ReadData.propertyConfig;
 
 public class BaseTest {
     WebDriver driver = null;
@@ -24,10 +27,9 @@ public class BaseTest {
     CheckoutPaymentPage checkoutPaymentPage;
     CheckoutFinalPage checkoutFinalPage;
 
-
     @BeforeClass(groups = "all")
     public void setUp(){
-        driver = BrowserFactory.launchGivenBrowser("chrome");
+        driver = BrowserFactory.launchGivenBrowser("browser");
         driver.get("https://magento.softwaretestingboard.com/");
         homePage = new HomePage(driver);
         productPage = new ProductPage(driver);
@@ -48,16 +50,20 @@ public class BaseTest {
     }
     @Test(priority = 2, groups = {"all"})
     public void confirmProductsListed(){
+        System.out.println(" ");
+        System.out.println("- Current URL: "+homePage.getCurrentUrl());
+        System.out.println(" ");
         Assert.assertTrue((homePage.verifyEcoFriendlyProductsAvailable()));
         System.out.println("- Shop Eco Friendly Products Available");
     }
     @Test(priority = 3, groups = {"all"})
     public void confirmLinkNavigation(){
-        System.out.println("- Current URL: "+homePage.getCurrentUrl());
         homePage.clickEcoFriendlyProductsButton();
         System.out.println("- Button 'Shop Eco-Friendly' Clicked");
         GenericMethods.pauseExecutionFor(2);
+        System.out.println(" ");
         System.out.println("- Current URL: "+productPage.getCurrentUrl());
+        System.out.println(" ");
         try {
             Assert.assertNotSame(productPage.getCurrentUrl(), homePage.getCurrentUrl());
             System.out.println("- URL Navigation Successful");
@@ -80,6 +86,7 @@ public class BaseTest {
     }
     @Test(priority = 6, groups = {"all"})
     public void getProductDetails() {
+        System.out.println(" ");
         System.out.println("- Current URL: " + productDetailsPage.getCurrentUrl());
         System.out.println(" ");
         System.out.println("- Product: " + productDetailsPage.productInfo());
@@ -115,9 +122,7 @@ public class BaseTest {
     @Test(priority = 13, groups = {"all"})
     public void confirmShipping(){
         Assert.assertTrue(checkoutShippingPage.verifyOrderSummary());
-        System.out.println("- Order Summary:");
-        System.out.println(checkoutShippingPage.orderSummary());
-        System.out.println(" ");
+        checkoutShippingPage.orderSummary();
         checkoutShippingPage.enterShippingDetails();
     }
     @Test(priority = 14, groups = {"all"})

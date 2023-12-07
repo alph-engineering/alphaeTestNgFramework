@@ -23,6 +23,7 @@ public class CheckoutFinalPage {
     WebElement buttonCreateAccountCachedInfo;
     public void confirmOrderComplete(){
         System.out.println("- Current URL: " +driver.getCurrentUrl());
+        System.out.println(" ");
         System.out.println("- Order Complete! "+textOrderNo.getText());
         System.out.println(" Thank you!");
     }
