@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utils.GenericMethods;
 
 public class ProductPage {
     WebDriver driver;
@@ -30,9 +31,10 @@ public class ProductPage {
         String productURL= driver.getCurrentUrl();
         return productURL;
     }
-    public void actionSelectProduct(){ // receiving Element must be set. error
+    public void actionSelectProduct(){ // Actions not working in Firefox
         Actions action = new Actions(driver);
         action.moveToElement(selectProduct).perform();
+        GenericMethods.pauseExecutionFor(2);
         action.moveToElement(selectProduct).click().perform();
     }
     public void selectProduct(){

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Single]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="config" value="single.conf.json"/>
+  <test thread-count="5" name="SingleTest(failed)" verbose="0">
+    <groups>
+      <run>
+        <include name="all"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testcases.BaseTest">
+        <methods>
+          <include name="editQTY"/>
+          <include name="getProductDetails"/>
+          <include name="confirmOrderSuccess"/>
+          <include name="confirmShipping"/>
+          <include name="proceedToCheckout"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="addItemToCart"/>
+          <include name="confirmPayment"/>
+        </methods>
+      </class> <!-- testcases.BaseTest -->
+    </classes>
+  </test> <!-- SingleTest(failed) -->
+</suite> <!-- Failed suite [Single] -->

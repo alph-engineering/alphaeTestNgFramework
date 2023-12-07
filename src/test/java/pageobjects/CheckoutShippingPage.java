@@ -24,6 +24,8 @@ public class CheckoutShippingPage {
     WebElement linkCheckoutShipping;
     @FindBy(xpath = "//div[@class='block items-in-cart active']")
     WebElement textOrderSummary;
+    @FindBy(xpath = "//div[@class='block items-in-cart']")
+    WebElement buttonOrderSummary;
     @FindBy(xpath = "//div[@class='control _with-tooltip']//input[@id='customer-email']")
     WebElement inputEmailAddress;
     @FindBy(name = "firstname")
@@ -58,10 +60,16 @@ public class CheckoutShippingPage {
     WebElement buttonNext;
 
     public boolean verifyOrderSummary(){
-        return textOrderSummary.isDisplayed();
+        return buttonOrderSummary.isDisplayed();
     }
-    public String orderSummary(){
-        return textOrderSummary.getText();
+    public void orderSummary(){
+        System.out.println(driver.getCurrentUrl());
+        if (!(buttonOrderSummary==textOrderSummary)) {
+            buttonOrderSummary.click();
+        }
+        System.out.println(" ");
+        System.out.println("- Order Summary:");
+        System.out.println(textOrderSummary.getText());
     }
     public void enterShippingDetails(){
         readData = new ReadData();
