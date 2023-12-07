@@ -63,13 +63,14 @@ public class CheckoutShippingPage {
         return buttonOrderSummary.isDisplayed();
     }
     public void orderSummary(){
-        System.out.println(driver.getCurrentUrl());
+        System.out.println("- Current URL: " +driver.getCurrentUrl());
         if (!(buttonOrderSummary==textOrderSummary)) {
             buttonOrderSummary.click();
         }
         System.out.println(" ");
         System.out.println("- Order Summary:");
         System.out.println(textOrderSummary.getText());
+        System.out.println(" ");
     }
     public void enterShippingDetails(){
         readData = new ReadData();

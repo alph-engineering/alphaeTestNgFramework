@@ -11,14 +11,10 @@
     <classes>
       <class name="testcases.BaseTest">
         <methods>
-          <include name="editQTY"/>
-          <include name="getProductDetails"/>
-          <include name="confirmOrderSuccess"/>
           <include name="confirmShipping"/>
-          <include name="proceedToCheckout"/>
+          <include name="confirmOrderSuccess"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="addItemToCart"/>
           <include name="confirmPayment"/>
         </methods>
       </class> <!-- testcases.BaseTest -->
