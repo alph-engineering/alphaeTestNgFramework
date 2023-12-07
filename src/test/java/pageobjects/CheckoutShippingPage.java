@@ -22,7 +22,7 @@ public class CheckoutShippingPage {
 
     @FindBy(linkText = "https://magento.softwaretestingboard.com/checkout/#shipping")
     WebElement linkCheckoutShipping;
-    @FindBy(xpath = "//div[@class='block items-in-cart active']")
+    @FindBy(xpath = "//div[@class='content minicart-items']")
     WebElement textOrderSummary;
     @FindBy(xpath = "//div[@class='block items-in-cart']")
     WebElement buttonOrderSummary;
@@ -60,17 +60,15 @@ public class CheckoutShippingPage {
     WebElement buttonNext;
 
     public boolean verifyOrderSummary(){
-        return buttonOrderSummary.isDisplayed();
+        return textOrderSummary.isDisplayed();
     }
     public void orderSummary(){
         System.out.println("- Current URL: " +driver.getCurrentUrl());
-        if (!(buttonOrderSummary==textOrderSummary)) {
-            buttonOrderSummary.click();
-        }
         System.out.println(" ");
         System.out.println("- Order Summary:");
         System.out.println(textOrderSummary.getText());
         System.out.println(" ");
+
     }
     public void enterShippingDetails(){
         readData = new ReadData();

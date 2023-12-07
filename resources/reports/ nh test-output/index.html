@@ -208,7 +208,38 @@
                   <a name="confirmOrderSuccess">
                   </a> <!-- confirmOrderSuccess -->
                   <span class="method-name">confirmOrderSuccess</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //div[@class=&apos;checkout-success&apos;]//p[1]
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=119.0.6045.199)
+Build info: version: &apos;4.14.1&apos;, revision: &apos;03f8ede370&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.7.10&apos;, java.version: &apos;21.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b6c9cfcc476519e00a9b4b20c91339b8, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.199, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /var/folders/c3/yhl2xr0j7m5...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55566}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55566/devtoo..., se:cdpVersion: 119.0.6045.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b6c9cfcc476519e00a9b4b20c91339b8
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:679)
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:316)
+	at pageobjects.CheckoutFinalPage.confirmOrderComplete(CheckoutFinalPage.java:25)
+	at testcases.BaseTest.confirmOrderSuccess(BaseTest.java:138)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="confirmPayment">
+                  </a> <!-- confirmPayment -->
+                  <span class="method-name">confirmPayment</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //input[@id=&apos;billing-address-same-as-shipping-checkmo&apos;]
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.14.1&apos;, revision: &apos;03f8ede370&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.7.10&apos;, java.version: &apos;21.0.1&apos;
@@ -219,46 +250,11 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy9.getText(Unknown Source)
-	at pageobjects.CheckoutFinalPage.confirmOrderComplete(CheckoutFinalPage.java:27)
-	at testcases.BaseTest.confirmOrderSuccess(BaseTest.java:138)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="confirmPayment">
-                  </a> <!-- confirmPayment -->
-                  <span class="method-name">confirmPayment</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@id=&apos;billing-address-same-as-shipping-checkmo&apos;]&quot;}
-  (Session info: chrome=119.0.6045.199)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.14.1&apos;, revision: &apos;03f8ede370&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.7.10&apos;, java.version: &apos;21.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4d0360bfb83f388138667f1bcbbf11ad, findElement {using=xpath, value=//input[@id=&apos;billing-address-same-as-shipping-checkmo&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.199, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /var/folders/c3/yhl2xr0j7m5...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55436}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55436/devtoo..., se:cdpVersion: 119.0.6045.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4d0360bfb83f388138667f1bcbbf11ad
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at jdk.proxy2/jdk.proxy2.$Proxy9.isSelected(Unknown Source)
 	at pageobjects.CheckoutPaymentPage.verifyBillingShippingSync(CheckoutPaymentPage.java:43)
 	at testcases.BaseTest.confirmPayment(BaseTest.java:131)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 32 stack frames
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -273,9 +269,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: &apos;4.14.1&apos;, revision: &apos;03f8ede370&apos;
 System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.7.10&apos;, java.version: &apos;21.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4d0360bfb83f388138667f1bcbbf11ad, findElement {using=xpath, value=//div[@class=&apos;block items-in-cart&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.199, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /var/folders/c3/yhl2xr0j7m5...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55436}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55436/devtoo..., se:cdpVersion: 119.0.6045.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4d0360bfb83f388138667f1bcbbf11ad
+Command: [b6c9cfcc476519e00a9b4b20c91339b8, findElement {using=xpath, value=//div[@class=&apos;block items-in-cart&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.199, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: /var/folders/c3/yhl2xr0j7m5...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55566}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:55566/devtoo..., se:cdpVersion: 119.0.6045.199, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b6c9cfcc476519e00a9b4b20c91339b8
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
@@ -515,70 +511,70 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(15);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'confirmPayment')
+data.setCell(0, 1, 'confirmShipping')
 data.setCell(0, 2, 'testcases.BaseTest')
-data.setCell(0, 3, 25198);
+data.setCell(0, 3, 20106);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'confirmShipping')
+data.setCell(1, 1, 'proceedToCheckout')
 data.setCell(1, 2, 'testcases.BaseTest')
-data.setCell(1, 3, 20135);
+data.setCell(1, 3, 8781);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'confirmOrderSuccess')
+data.setCell(2, 1, 'confirmPayment')
 data.setCell(2, 2, 'testcases.BaseTest')
-data.setCell(2, 3, 10088);
+data.setCell(2, 3, 8648);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'proceedToCheckout')
+data.setCell(3, 1, 'selectProductWH09')
 data.setCell(3, 2, 'testcases.BaseTest')
-data.setCell(3, 3, 8087);
+data.setCell(3, 3, 7476);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'selectProductWH09')
+data.setCell(4, 1, 'addItemToCart')
 data.setCell(4, 2, 'testcases.BaseTest')
-data.setCell(4, 3, 7490);
+data.setCell(4, 3, 6302);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'addItemToCart')
+data.setCell(5, 1, 'confirmLinkNavigation')
 data.setCell(5, 2, 'testcases.BaseTest')
-data.setCell(5, 3, 6302);
+data.setCell(5, 3, 2946);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'confirmLinkNavigation')
+data.setCell(6, 1, 'confirmApplicationLaunch')
 data.setCell(6, 2, 'testcases.BaseTest')
-data.setCell(6, 3, 2952);
+data.setCell(6, 3, 381);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'confirmApplicationLaunch')
+data.setCell(7, 1, 'editQTY')
 data.setCell(7, 2, 'testcases.BaseTest')
-data.setCell(7, 3, 438);
+data.setCell(7, 3, 347);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'editQTY')
+data.setCell(8, 1, 'confirmProductsListed')
 data.setCell(8, 2, 'testcases.BaseTest')
-data.setCell(8, 3, 293);
+data.setCell(8, 3, 254);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'confirmColorSelection')
+data.setCell(9, 1, 'confirmSizeSelection')
 data.setCell(9, 2, 'testcases.BaseTest')
-data.setCell(9, 3, 211);
+data.setCell(9, 3, 175);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'confirmProductsListed')
+data.setCell(10, 1, 'getProductDetails')
 data.setCell(10, 2, 'testcases.BaseTest')
-data.setCell(10, 3, 178);
+data.setCell(10, 3, 119);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'confirmSizeSelection')
+data.setCell(11, 1, 'confirmColorSelection')
 data.setCell(11, 2, 'testcases.BaseTest')
-data.setCell(11, 3, 145);
+data.setCell(11, 3, 118);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'getProductDetails')
+data.setCell(12, 1, 'confirmAddToCartSelection')
 data.setCell(12, 2, 'testcases.BaseTest')
-data.setCell(12, 3, 128);
+data.setCell(12, 3, 44);
 data.setCell(13, 0, 13)
 data.setCell(13, 1, 'viewFooter')
 data.setCell(13, 2, 'testcases.BaseTest')
-data.setCell(13, 3, 58);
+data.setCell(13, 3, 34);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'confirmAddToCartSelection')
+data.setCell(14, 1, 'confirmOrderSuccess')
 data.setCell(14, 2, 'testcases.BaseTest')
-data.setCell(14, 3, 43);
+data.setCell(14, 3, 11);
 window.suiteTableData['Single']= { tableData: data, tableDiv: 'times-div-Single'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 55 seconds</span>
               <div id="times-div-Single">
               </div> <!-- times-div-Single -->
             </div> <!-- times-div -->
@@ -611,73 +607,73 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">confirmApplicationLaunch</span>
-                <span class="method-start">7552 ms</span>
+                <span class="method-start">8919 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">confirmProductsListed</span>
-                <span class="method-start">8015 ms</span>
+                <span class="method-start">9318 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">confirmLinkNavigation</span>
-                <span class="method-start">8196 ms</span>
+                <span class="method-start">9575 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">selectProductWH09</span>
-                <span class="method-start">11150 ms</span>
+                <span class="method-start">12523 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">confirmAddToCartSelection</span>
-                <span class="method-start">18643 ms</span>
+                <span class="method-start">20002 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getProductDetails</span>
-                <span class="method-start">18689 ms</span>
+                <span class="method-start">20048 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">confirmSizeSelection</span>
-                <span class="method-start">18820 ms</span>
+                <span class="method-start">20170 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">confirmColorSelection</span>
-                <span class="method-start">18974 ms</span>
+                <span class="method-start">20346 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">editQTY</span>
-                <span class="method-start">19186 ms</span>
+                <span class="method-start">20466 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">addItemToCart</span>
-                <span class="method-start">19482 ms</span>
+                <span class="method-start">20815 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">viewFooter</span>
-                <span class="method-start">25787 ms</span>
+                <span class="method-start">27120 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">proceedToCheckout</span>
-                <span class="method-start">25847 ms</span>
+                <span class="method-start">27155 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">confirmShipping</span>
-                <span class="method-start">33937 ms</span>
+                <span class="method-start">35938 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">confirmPayment</span>
-                <span class="method-start">54091 ms</span>
+                <span class="method-start">56067 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">confirmOrderSuccess</span>
-                <span class="method-start">79293 ms</span>
+                <span class="method-start">64725 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">89388 ms</span>
+                <span class="method-start">64740 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
